@@ -1,0 +1,12 @@
+enum {select, leftStick, rightStick, start, up, right, down, left}; //3rd byte
+enum {leftFront2, rightFront2, leftFront1, rightFront1, triangle_up, circle_right, cross_down, square_left}; // 4th byte
+
+enum left;
+
+int isPressed(uint8_t dataByte, uint8_t dataBit) {
+	return ((dataByte & (1 << dataBit)) ? 1 : 0);
+}
+
+uint8_t x,y;
+
+int num;
